@@ -1,0 +1,57 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="150"
+		Width="300" Height="150"
+        x:Class="EngageRemastered.MainWindow"
+        Title="EngageRemastered">
+	<Grid>
+		<Menu Height="22" VerticalAlignment="Top" Name="menuMain">
+			<MenuItem Header="File">
+				<MenuItem Header="Open" HotKey="Ctrl+O" InputGesture="Ctrl+O" Name="menuOpen" />
+				<MenuItem Header="Load Package File" HotKey="Ctrl+P" InputGesture="Ctrl+P" Name="menuLoadPackageFile" />
+				<MenuItem Header="Close" HotKey="Ctrl+W" InputGesture="Ctrl+W" Name="menuClose" />
+				<MenuItem Header="Save" HotKey="Ctrl+S" InputGesture="Ctrl+S" Name="menuSave" />
+				<Separator />
+				<MenuItem Header="Compress" HotKey="Ctrl+M" InputGesture="Ctrl+M" Name="menuCompress" />
+				<MenuItem Header="Exit" HotKey="Ctrl+Q" InputGesture="Ctrl+Q" Name="menuExit" />
+			</MenuItem>
+			<MenuItem Header="Options">
+				<MenuItem Header="Toggle Dark Theme" Name="menuToggleDarkTheme" />
+				<MenuItem Header="Enable/Disable Cpp2Il" Name="menuToggleCpp2Il" />
+			</MenuItem>
+			<MenuItem Header="Help">
+				<MenuItem Header="About..." Name="menuAbout" />
+			</MenuItem>
+		</Menu>
+
+
+		<Grid Margin="10,27,10,0" VerticalAlignment="Top" Grid.IsSharedSizeScope="True">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*"></RowDefinition>
+				<RowDefinition Height="*"></RowDefinition>
+				<RowDefinition Height="*"></RowDefinition>
+			</Grid.RowDefinitions>
+			<Grid Grid.Row="0">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*"></ColumnDefinition>
+				</Grid.ColumnDefinitions>
+				<Button Grid.Column="0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" IsEnabled="True" Name="btnOpenEngageAssets" Click="btnEngageAssetsPath_Click">Open Engage Assets Folder</Button>
+			</Grid>
+			<Grid Grid.Row="1">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*"></ColumnDefinition>
+				</Grid.ColumnDefinitions>
+				<Button Grid.Column="0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" IsEnabled="True" Name="btnOpenEngageXml" Click="btnEngageXmlPath_Click">Open EngageXml Path</Button>
+			</Grid>
+			<Grid Grid.Row="2">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*"></ColumnDefinition>
+				</Grid.ColumnDefinitions>
+				<Button Grid.Column="0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" IsEnabled="True" Name="btn" Click="btnRandomize_Click">Randomize!</Button>
+			</Grid>
+		</Grid>
+
+	</Grid>
+</Window>
